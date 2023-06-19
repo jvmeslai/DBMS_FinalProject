@@ -44,7 +44,7 @@ public class CasePage extends JFrame {
 			a.printStackTrace();
 		}
 		*/
-
+		
 		
 		
 		//設定整體顏色與尺寸

@@ -50,7 +50,7 @@ public class MatchPage extends JFrame {
 	*/
     
     public MatchPage(User user, int CaseID)throws SQLException {
-		String server = "jdbc:mysql://140.119.19.73:3315/";
+  		String server = "jdbc:mysql://140.119.19.73:3315/";
         String database = "109208079";
         String url = server + database + "?useSSL=false";
         String username = "109208079";
@@ -177,11 +177,11 @@ public class MatchPage extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
             	
-        		String server = "jdbc:mysql://localhost/";
-        		String database = "DBMS_FinalProject";
-        		String url = server + database + "?useSSL=false";
-        		String username = "root";
-        		String password = "";
+        		String server = "jdbc:mysql://140.119.19.73:3315/";
+                String database = "109208079";
+                String url = server + database + "?useSSL=false";
+                String username = "109208079";
+                String password = "uka1z";
             	try {
             		conn = DriverManager.getConnection(url, username, password);
             		System.out.println("DB Connectd @ match page");
@@ -236,13 +236,13 @@ public class MatchPage extends JFrame {
  	
 		try {
 			//stat = conn.createStatement();
-	    	query="SELECT Case_Name,W_ID,reply FROM CASES WHERE I_ID = "+user.getID();
+	    	query="SELECT Case_Name,W_ID,reply FROM CASES WHERE Case_ID = "+CaseID;
 			success = stat.execute(query);
 			if (success) {
 				ResultSet rs = stat.getResultSet();
 				while(rs.next()) {
 					lblSubTitle_2.setText(String.format("恭喜！您的案件：<%s>",rs.getString("Case_Name")));				
-					lblInfo.setText(String.format("留言: %s",rs.getString("reply")));
+					lblInfo.setText(String.format("留言 : %s",rs.getString("reply")));
 					identityLbl.setText(""+rs.getInt("W_ID"));
 				}
 			}

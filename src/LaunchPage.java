@@ -146,7 +146,7 @@ public class LaunchPage extends JFrame {
                     // 處理匿名發案按鈕的事件
                     JOptionPane.showMessageDialog(frame, "恭喜您已成功刊登", "Success", JOptionPane.INFORMATION_MESSAGE);
 
-            		String server = "jdbc:mysql://140.119.19.73:3315/";
+                    String server = "jdbc:mysql://140.119.19.73:3315/";
                     String database = "109208079";
                     String url = server + database + "?useSSL=false";
                     String username = "109208079";
@@ -206,3 +206,4 @@ public class LaunchPage extends JFrame {
     }
 }
 
+        

@@ -113,14 +113,12 @@ public class CaseDetailPage extends JFrame {
 			JPanel panel = new JPanel();
 			panel.setBounds(0, 125, 430, 93);
 			MainPanel.add(panel);
-			panel.setBackground(new Color(238,238,238));
 			panel.setLayout(null);
 		
 			JLabel lblNewLabel_5 = new JLabel("案件說明：");
 			lblNewLabel_5.setFont(new Font("微軟正黑體", Font.PLAIN, 14));
 			lblNewLabel_5.setBounds(0, 6, 75, 16);
 			lblNewLabel_5.setHorizontalAlignment(SwingConstants.LEFT);
-			lblNewLabel_5.setBackground(new Color(238,238,238));
 			panel.add(lblNewLabel_5);
 		
 		

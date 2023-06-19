@@ -107,3 +107,4 @@ public class ChatRoom extends JFrame { // 目前不做聊天室即時聯繫功�
             
 	}
 }
+

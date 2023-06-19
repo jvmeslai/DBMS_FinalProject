@@ -232,7 +232,7 @@ public class CommentPage extends JFrame {
         		//讀取結果並加入Case列表
         				while(rs.next()) {
         					W_ID = rs.getString("W_ID");
-        					price = rs.getInt("Price") - 5;
+        					price = rs.getInt("Price");
         				}
         			}
         			}
@@ -345,7 +345,7 @@ public class CommentPage extends JFrame {
         		//讀取結果並加入Case列表
         				while(rs.next()) {
         					W_ID = rs.getString("W_ID");
-        					price = rs.getInt("Price") - 5;
+        					price = rs.getInt("Price");
         				}
         			}
         			}
@@ -393,7 +393,7 @@ public class CommentPage extends JFrame {
 					Statement stat = conn.createStatement();
 
 				
-					String bquery = String.format("UPDATE USER SET balance = balance + %d WHERE User_ID = '%s' ;",price,W_ID);
+					String bquery = String.format("UPDATE USER SET balance = balance + %d WHERE User_ID = '%s' ;",price-5,W_ID);
 					
 					stat.execute(bquery);
 				
